@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+
+<div class="contact-bg">
+    <br>
+    <div class="form-container">
+        <h1 style="color: white; text-align: center;">Contact Us:</h1>
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="form-group text-white">
+                {{ form.name.label_tag }}
+                {{ form.name }}
+            </div>
+
+            <div class="form-group text-white">
+                {{ form.phone.label_tag }}
+                {{ form.phone }}
+            </div>
+
+            <div class="form-group text-white">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+
+            <div class="form-group text-white">
+                {{ form.boat_info.label_tag }}
+                {{ form.boat_info }}
+            </div>
+
+            <div class="form-group text-white">
+                {{ form.boat_length.label_tag }}
+                {{ form.boat_length }}
+            </div>
+
+            <div class="form-group text-white">
+                {{ form.message.label_tag }}
+                {{ form.message }}
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    <br>
+</div>
+
+{% endblock %}

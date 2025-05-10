@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <title>{% block title %}Destination Water Sports{% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'home/css/middle.css' %}">
+
+        <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/saftey.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/rates.css' %}">
+
+        <link rel="icon" href="{% static 'images/logos/destination-water-sports-logo.png' %}" type="image/png">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+        <script src="{% static 'js/hamburger-menu.js' %}"></script>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+ 
+
+        <!-- Bootstrap Navbar -->
+        <header>
+            
+            
+            <nav class="navbar navbar-dark">
+                
+                <a class="d-flex align-items-center" href="{% url 'home' %}" style="max-width: 250px;">
+                    <img src="{% static 'images/logos/destination-water-sports-logo.png' %}" alt="Logo" style="height: 150px;">
+                </a>
+
+                <div class="address-container text-center mx-3">
+                    <h1 class="marina-name">Destination Water Sports</h1>
+                </div>
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarToggleSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'home' %}">Home</a> 
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'rates' %}">Our Rates</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'saftey' %}">Instructional Videos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'contact' %}">Contact Us</a>
+                    </li>
+                    
+                    
+
+                  </ul>
+                </div>
+              </nav>
+        </header> 
+
+        
+        
+
+        <!-- Main Content Area -->
+        <main>
+            {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}" style="color: red; background-color: white; font-size: large; font-weight: bold;">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% block content %}
+            <!-- Page-specific content will go here -->
+            {% endblock %}
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-row">
+
+                <div class="footer-column footer-column-side">
+
+                
+                    <a href="https://www.destinationboatclubscarolinas.com/">
+                        <img src="{% static '/images/logos/dbc-logo-small.png' %}" class="logo-link">
+                    </a>
+
+                </div>
+
+                <div class="footer-column footer-column-middle">
+                    <div class="footer-info">
+                        <p>Call us at</p>
+                        <p>(803) 801-1077 Lake Wateree</p>
+                        <p>(864) 332-9125 Lake Hartwell</p>
+                        <p>Wibit & Water Bike only at Lake Hartwell</p>
+                        <p>&copy; 2025 Dutchman Marina</p>
+                        <p>*images are for  illustration purposes only and may not represent the exact product featured*</p>
+
+                    </div>
+                </div>
+
+                <div class="footer-column footer-column-side">
+
+                    <a href="https://www.dutchmanmarina.com/">
+                        <img src="{% static '/images/logos/Dutchman-Marina-logo.png' %}" class="logo-link">
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-column footer-column-middle">
+                <a href="https://www.facebook.com/people/Dutchman-Marina/61563818362311/?_rdr"><img src="{% static 'images/logos/facebook-icon.jpg' %}" alt="Facebook"></a>
+                <a href="https://www.facebook.com/people/Dutchman-Marina/61563818362311/?_rdr"><img src="{% static 'images/logos/twitter-icon.jpg' %}" alt="Twitter"></a>
+                <a href="https://www.facebook.com/people/Dutchman-Marina/61563818362311/?_rdr"><img src="{% static 'images/logos/instagram-icon.png' %}" alt="Instagram"></a>
+                <a href="https://www.facebook.com/people/Dutchman-Marina/61563818362311/?_rdr"><img src="{% static 'images/logos/linkedin-icon.png' %}" alt="Linkedin"></a>
+                <a href="https://www.facebook.com/people/Dutchman-Marina/61563818362311/?_rdr"><img src="{% static 'images/logos/pinterest-icon.png' %}" alt="Pinterest"></a>
+                <a href="https://www.facebook.com/people/Dutchman-Marina/61563818362311/?_rdr"><img src="{% static 'images/logos/youtube-icon.png' %}" alt="Youtube"></a>
+                <a href="https://www.facebook.com/people/Dutchman-Marina/61563818362311/?_rdr"><img src="{% static 'images/logos/reddit-icon.png' %}" alt="Reddit"></a>
+                <a href="https://www.facebook.com/people/Dutchman-Marina/61563818362311/?_rdr"><img src="{% static 'images/logos/tumblr-icon.jpg' %}" alt="Tumblr"></a>
+                <a href="https://www.facebook.com/people/Dutchman-Marina/61563818362311/?_rdr"><img src="{% static 'images/logos/vimeo-icon.png' %}" alt="Vimeo"></a>
+                <a href="https://www.facebook.com/people/Dutchman-Marina/61563818362311/?_rdr"><img src="{% static 'images/logos/tiktok-icon.png' %}" alt="Tiktok"></a>
+
+            </div>
+
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.js"></script>
+        <script src="{% static 'home/js/lightbox.js' %}"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        
+    </body>
+</html>

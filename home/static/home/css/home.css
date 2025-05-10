@@ -1,0 +1,99 @@
+.water-sports-carousel-container {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.water-sports-carousel-container img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+
+}
+.water-sports-carousel-text-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    
+
+}
+
+.text-container p {
+    font-size: 1.2rem; 
+    margin-bottom: 20px;
+    line-height: 1.5; 
+}
+
+.water-sports-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll; 
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.water-sports-carousel::-webkit-scrollbar {
+    display: none; 
+}
+
+.water-sports-carousel-item {
+    flex: 0 0 33%;
+    scroll-snap-align: start;
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.water-sports-carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.water-sports-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.water-sports-carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.water-sports-carousel-btn.prev {
+    left: 10px;
+}
+
+.water-sports-carousel-btn.next {
+    right: 10px;
+} 
+ 
+@media (max-width: 768px) {
+    .water-sports-carousel-text-container {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    .water-sports-carousel-container,
+    .text-container {
+        max-width: 100%;
+        flex: none; 
+        margin-bottom: 20px; 
+    }
+}

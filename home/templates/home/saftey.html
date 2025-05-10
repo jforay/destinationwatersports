@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="hero-section">
+    <div class="container hero-overlay">
+        <h1>Instructional Videos</h1>
+        <p>Enjoy our Boating, Kayak and Safety Videos</p>
+        <div class="d-flex justify-content-between flex-wrap" style="max-width: 600px; margin: 0 auto;">
+            <button class="btn btn-primary" onclick="changeVideo('838363950')">Boating & Safety</button>
+            <button class="btn btn-primary" onclick="changeVideo('838366375')">Kayak Info & Safety</button>
+        </div>
+        
+
+        <div class="video-frame">
+            <iframe id="vimeo-player" src="https://player.vimeo.com/video/838363950?autoplay=1&muted=1" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+function changeVideo(videoId) {
+    const player = document.getElementById('vimeo-player');
+    player.src = `https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1`;
+}
+</script>
+
+
+{% endblock %}
