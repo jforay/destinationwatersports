@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-txl3ko%z0j-w*6)#h4i@*(99=38$zhs2ie0$lx^pi%#$$@mqwx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://destination-watersports-dda86a49bc97.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = ['https://destination-watersports-dda86a49bc97.herokuapp.com/',
+                 '127.0.0.1',
+                 'destinationwatersportscarolinas.com',
+                 'www.destinationwatersportscarolinas.com',
+                ]
 
 
 # Application definition
