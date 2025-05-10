@@ -1,3 +1,3 @@
 release: python manage.py collectstatic --noinput
 
-web: gunicorn dutchmanCreek.wsgi:application --log-file -
+web: gunicorn destinationwatersports.wsgi:application --log-file -
